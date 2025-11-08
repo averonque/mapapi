@@ -7,7 +7,7 @@ export default function RadarMap() {
 
   useEffect(() => {
     const fetchRadar = async () => {
-      const res = await axios.get('http://188.137.240.130:8000/api/rala?min_lat=51&max_lat=54&min_lon=235&max_lon=238'); // Update with your backend URL
+      const res = await axios.get('https://188.137.240.130:8000/api/rala?min_lat=51&max_lat=54&min_lon=235&max_lon=238'); // Update with your backend URL
       setPoints(res.data);
     };
     fetchRadar();
@@ -37,5 +37,7 @@ function getColor(dBZ) {
   if (dBZ > 30) return '#FC4E2A';
   if (dBZ > 20) return '#FD8D3C';
   if (dBZ > 10) return '#FEB24C';
+  if (dBZ < 10) return '#FEB24C';
+  
   return '#FFEDA0';
 }
