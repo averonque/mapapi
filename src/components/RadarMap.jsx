@@ -7,7 +7,7 @@ export default function RadarMap() {
 
   useEffect(() => {
     const fetchRadar = async () => {
-      const res = await axios.get('http://188.137.240.130:8000/api/rala?min_lat=21&max_lat=54&min_lon=235&max_lon=238'); // Update with your backend URL
+      const res = await axios.get('http://188.137.240.130:8000/api/rala?min_lat=51&max_lat=54&min_lon=235&max_lon=238'); // Update with your backend URL
       setPoints(res.data);
     };
     fetchRadar();
