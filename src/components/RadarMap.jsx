@@ -23,7 +23,7 @@ export default function RadarMap() {
           key={i}
           center={[pt.lat, pt.lon]}
           radius={2}
-          pathOptions={{ color: getColor(pt.dBZ), fillOpacity: 0.05 }}
+          pathOptions={{ color: getColor(pt.dBZ), fillOpacity: 0.4 }}
         />
       ))}
     </MapContainer>
